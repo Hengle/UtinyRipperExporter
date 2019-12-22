@@ -27,32 +27,120 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <LangVersion>7.3</LangVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bins\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bins\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Virtual|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bins\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VIRTUAL</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;WIN64</DefineConstants>
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>7.2</LangVersion>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
-    <OutputPath>bin\x64\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
     <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
+    <DebugType>none</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <LangVersion>7.3</LangVersion>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Virtual|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VIRTUAL</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Virtual|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bins\$(Configuration)\$(Platform)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;VIRTUAL</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <BaseIntermediateOutputPath>..\Bins\obj\</BaseIntermediateOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CommandLine, Version=2.5.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommandLineParser.2.5.0\lib\net461\CommandLine.dll</HintPath>
+    <Reference Include="CommandLine, Version=2.6.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommandLineParser.2.6.0\lib\net461\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,33 +151,26 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="YamlDotNet, Version=6.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>..\packages\YamlDotNet.6.1.2\lib\net45\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DummyShaderExporter.cs" />
-    <Compile Include="DummyShaderTextExporter.cs" />
+    <Compile Include="Shaders\AsmExporter.cs" />
+    <Compile Include="Shaders\CustomShaderAssetExporter.cs" />
+    <Compile Include="Shaders\CustomShaderTextExporter.cs" />
+    <Compile Include="Shaders\DummyShaderTextExporter.cs" />
     <Compile Include="ConsoleLogger.cs" />
     <Compile Include="DumpInfo.cs" />
+    <Compile Include="ExportSettings.cs" />
     <Compile Include="GameStructureExporter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScriptExporter.cs" />
     <Compile Include="ScriptFixer.cs" />
+    <Compile Include="Shaders\HLSLccExporter.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>
-  <!--<ItemGroup>
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\ThirdParty\D3DCompiler\D3DCompiler.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\ThirdParty\D3DCompiler\DotNetDxc.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\ThirdParty\FMOD Studio API\fmod.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\ThirdParty\FMOD Studio API\fmod_dsp.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\ThirdParty\FMOD Studio API\fmod_errors.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Audio\AudioAssetExporter.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Audio\AudioExportCollection.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Shader\ShaderAssetExporter.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Shader\ShaderDXExporter.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Texture\QFORMAT.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Texture\TexgenpackTexturetype.cs" />
-    <Compile Include="..\..\UtinyRipper\uTinyRipperGUI\Exporters\Texture\TextureAssetExporter.cs" />
-  </ItemGroup>-->
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
@@ -116,81 +197,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <!--<ItemGroup Condition=" '$(Platform)' == 'x86' ">
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\astcenc_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>astcenc.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\crunch_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>crunch.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\crunchunity_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>crunchunity.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\fmod_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>fmod.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\PVRTexLib.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>PVRTexLib.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\PVRTexLibWrapper_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>PVRTexLibWrapper.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\texgenpack_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>texgenpack.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\TextureConverter.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>TextureConverter.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x86\TextureConverterWrapper_x86.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>TextureConverterWrapper.dll</TargetPath>
-    </ContentWithTargetPath>
+  <ItemGroup Condition="'$(Platform)' == 'x86'">
+    <Reference Include="HLSLccWrapper_x86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\HLSLccWrapper_x86.dll</HintPath>
+    </Reference>
   </ItemGroup>
-  <ItemGroup Condition=" '$(Platform)' == 'x64' ">
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\astcenc_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>astcenc.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\crunch_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>crunch.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\crunchunity_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>crunchunity.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\fmod_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>fmod.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\PVRTexLib.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>PVRTexLib.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\PVRTexLibWrapper_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>PVRTexLibWrapper.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\texgenpack_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>texgenpack.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\TextureConverter.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>TextureConverter.dll</TargetPath>
-    </ContentWithTargetPath>
-    <ContentWithTargetPath Include="..\..\UtinyRipper\uTinyRipperGUI\Libraries\x64\TextureConverterWrapper_x64.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <TargetPath>TextureConverterWrapper.dll</TargetPath>
-    </ContentWithTargetPath>
-  </ItemGroup>-->
+  <ItemGroup Condition="'$(Platform)' == 'x64'">
+    <Reference Include="HLSLccWrapper_x64, processorArchitecture=x64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\HLSLccWrapper_x64.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
